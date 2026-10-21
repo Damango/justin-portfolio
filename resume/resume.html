@@ -1,0 +1,164 @@
+<!doctype html>
+<!--
+  Résumé source. Edit this file, then run `npm run resume` to rebuild
+  public/resume.pdf (the file the site's download buttons serve).
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Justin Kessler — Résumé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet" />
+    <style>
+      @page { size: Letter; margin: 0.45in 0.55in; }
+      :root { --ink: #18181b; --muted: #52525b; --faint: #a1a1aa; --rule: #e4e4e7; --accent: #2f6fd6; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font: 400 9.5pt/1.38 Geist, 'Segoe UI', Arial, sans-serif; color: var(--ink); background: #fff; }
+      a { color: inherit; text-decoration: none; }
+
+      header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 10pt; border-bottom: 1.5pt solid var(--ink); }
+      h1 { font-size: 24pt; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+      .title { margin-top: 5pt; font-size: 11pt; font-weight: 500; color: var(--muted); }
+      .contact { text-align: right; font: 400 8.6pt/1.6 'Geist Mono', Consolas, monospace; color: var(--muted); }
+
+      .summary { margin-top: 8pt; color: var(--muted); }
+
+      section { margin-top: 10pt; }
+      h2 { font: 600 8pt/1 'Geist Mono', Consolas, monospace; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); padding-bottom: 4pt; border-bottom: 0.75pt solid var(--rule); margin-bottom: 7pt; }
+
+      .item + .item { margin-top: 7pt; }
+      .item, h2 { break-inside: avoid; } h2 { break-after: avoid; }
+      .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+      h3 { font-size: 10.5pt; font-weight: 600; }
+      h3 .at { font-weight: 400; color: var(--muted); }
+      .when { font: 400 8.6pt 'Geist Mono', Consolas, monospace; color: var(--muted); white-space: nowrap; }
+      .sub { font-size: 9pt; color: var(--muted); margin-top: 1pt; }
+      .stack { font: 400 8.3pt 'Geist Mono', Consolas, monospace; color: var(--muted); }
+
+      ul { margin-top: 3pt; padding-left: 12pt; }
+      li { margin-top: 1.5pt; }
+      li::marker { color: var(--faint); }
+
+      .skills { display: grid; grid-template-columns: 92pt 1fr; row-gap: 3pt; }
+      .skills dt { font-weight: 600; }
+      .skills dd { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Justin Kessler</h1>
+        <div class="title">Full Stack Software Engineer</div>
+      </div>
+      <div class="contact">
+        Orlando, FL<br />
+        <a href="mailto:justinkesslerio@protonmail.com">justinkesslerio@protonmail.com</a>
+      </div>
+    </header>
+
+    <p class="summary">
+      Full stack engineer with 5+ years building web applications, from high-traffic public sites with millions of visitors to
+      internal data and analytics tools. Works end to end across TypeScript, React, Node.js, SQL and AWS, and currently builds
+      real-time and AI-driven products as an independent engineer.
+    </p>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="item">
+        <div class="row">
+          <h3>Independent Software Engineer <span class="at">· Freelance · Remote</span></h3>
+          <span class="when">Nov 2023 – Present</span>
+        </div>
+        <ul>
+          <li>Design, build and deploy full-stack web applications end to end with TypeScript, React, Node.js and Bun, from PostgreSQL schema and authentication to UI and hosting on Vercel.</li>
+          <li>Build real-time, data-visualization and AI-tooling products, including the projects below.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <h3>Full Stack Developer <span class="at">· Launch That</span></h3>
+          <span class="when">May 2021 – Nov 2023</span>
+        </div>
+        <div class="sub">Media &amp; SEO company · Orlando, FL</div>
+        <ul>
+          <li>Led development of <strong>Disavowl</strong>, a web app for categorizing and filtering millions of backlink URLs; rebuilt URL processing on AWS and MySQL and sped up search with an object-oriented JavaScript redesign.</li>
+          <li>Optimized <strong>Reportaroo</strong>, a financial analytics app, to pull from hundreds of thousands of financial data points and turn them into data insights, reworking MySQL queries and data storage for faster retrieval.</li>
+          <li>Led the replacement of jQuery with vanilla JavaScript across public sites with millions of visitors, including 50+ script files on Asbestos.com.</li>
+          <li>Kept high-traffic sites fast and stable using AWS and Google Cloud, and built custom WordPress plugins and PHP scripts for data collection.</li>
+          <li>Led a consolidation dashboard for customer analytics and comparison, and revamped internal sign-up and login so new employees got access faster.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected projects</h2>
+
+      <div class="item">
+        <div class="row">
+          <h3>Fable <span class="at">· Agentic AI project manager</span></h3>
+          <span class="stack">TypeScript · React · Node.js · Zustand</span>
+        </div>
+        <ul>
+          <li>Kanban boards that scaffold repos, run their dev servers, and send tasks to Claude Code or Cursor as prompts.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <h3>Afterhours <span class="at">· Real-time multiplayer poker</span></h3>
+          <span class="stack">TypeScript · Bun · WebSockets</span>
+        </div>
+        <ul>
+          <li>Server-authoritative No-Limit Hold'em for up to 6 players with side pots, bots and action timers, plus three casino games on a shared wallet; tested against 250 randomized hands to prove chips are never created or lost.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <h3>Income Atlas <span class="at">· U.S. income data map</span></h3>
+          <span class="stack">TypeScript · React · D3</span>
+        </div>
+        <ul>
+          <li>Interactive Census income map with state-to-county drill-down, three income measures and trends since 2010.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <h3>Pizza Boyz <span class="at">· Restaurant site &amp; menu admin</span></h3>
+          <span class="stack">React · Tailwind · Supabase</span>
+        </div>
+        <ul>
+          <li>Mobile-first menu site fed live from Supabase, with an owner-only admin dashboard for editing the menu.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd>TypeScript, JavaScript, Python, C++, PHP, SQL, HTML/CSS</dd>
+        <dt>Frontend</dt>
+        <dd>React, Vue, Tailwind CSS, D3, WebGL, jQuery</dd>
+        <dt>Backend &amp; data</dt>
+        <dd>Node.js, Bun, REST APIs, WebSockets, PostgreSQL, MySQL, Supabase, WordPress</dd>
+        <dt>Cloud</dt>
+        <dd>AWS (Lambda, S3, API Gateway, EventBridge, CloudWatch, CloudFront), GCP (BigQuery, Firestore)</dd>
+        <dt>Tools</dt>
+        <dd>Git, Vercel, Vite, Claude Code, Cursor</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="row">
+        <h3>University of Central Florida <span class="at">· Computer Science coursework</span></h3>
+        <span class="when">Orlando, FL</span>
+      </div>
+    </section>
+  </body>
+</html>

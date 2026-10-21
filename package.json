@@ -1,0 +1,25 @@
+{
+	"name": "justin-portfolio",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --port 9990",
+		"build": "tsc --noEmit && vite build",
+		"preview": "vite preview",
+		"resume": "node scripts/build-resume.mjs"
+	},
+	"dependencies": {
+		"framer-motion": "^14.0.0",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.20.5",
+		"@types/react": "^19.0.0",
+		"@types/react-dom": "^19.0.0",
+		"@vitejs/plugin-react": "^6.1.2",
+		"typescript": "~5.9.0",
+		"vite": "^8.3.2"
+	}
+}
