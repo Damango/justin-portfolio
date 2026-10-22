@@ -82,7 +82,7 @@ export type Project = {
   tile: [string, string];
   caseStudy?: string;
   source?: string;
-  live?: string;
+  live?: string; // URL for the card's "Visit" button; leave empty to hide it
 };
 
 export const projects: Project[] = [
@@ -93,30 +93,34 @@ export const projects: Project[] = [
     status: 'progress',
     year: '2026',
     tile: ['#8ab8ff', '#3f78d4'],
+    live: '', // ← paste the project's website URL here to show a "Visit" button
   },
   {
-    name: 'Afterhours',
+    name: 'Afterhours (Gambling Simulator)',
     blurb: "Real-time multiplayer No-Limit Hold'em with side pots, bots and timers, plus roulette, baccarat and blackjack on one play-money wallet.",
     stack: ['TS', 'Bun', 'WebSockets'],
     status: 'beta',
     year: '2026',
     tile: ['#7ad874', '#43a03e'],
+    live: 'https://gambling-fun.vercel.app/', // ← paste the project's website URL here to show a "Visit" button
   },
   {
-    name: 'Income Atlas',
+    name: 'America Data Visualizer',
     blurb: 'An explorable map of U.S. household income built on Census ACS data: click a state to fly in to its counties and compare trends since 2010.',
     stack: ['TS', 'React', 'D3'],
     status: 'beta',
     year: '2026',
     tile: ['#f6b26b', '#cf7a2e'],
+    live: 'https://america-data-visualizer.vercel.app/', // ← paste the project's website URL here to show a "Visit" button
   },
   {
-    name: 'Aphelion One',
+    name: 'Quantum Computer Landing Page',
     blurb: 'A landing page for a fictional quantum computer, with a ray-marched WebGL hero and hand-built dithered canvas animations.',
     stack: ['JS', 'WebGL', 'Canvas'],
     status: 'progress',
     year: '2026',
     tile: ['#f3f3f5', '#b5b5be'],
+    live: 'https://quantum-computer-landing-page.vercel.app/', // ← paste the project's website URL here to show a "Visit" button
   },
   {
     name: 'Pizza Boyz',
@@ -125,6 +129,7 @@ export const projects: Project[] = [
     status: 'live',
     year: '2026',
     tile: ['#8ab8ff', '#3f78d4'],
+    live: '', // ← paste the project's website URL here to show a "Visit" button
   },
   {
     name: 'Pizza Boyz Menu Admin',
@@ -133,6 +138,7 @@ export const projects: Project[] = [
     status: 'live',
     year: '2026',
     tile: ['#f6b26b', '#cf7a2e'],
+    live: '', // ← paste the project's website URL here to show a "Visit" button
   },
 ];
 

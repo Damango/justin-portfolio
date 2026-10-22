@@ -2,7 +2,7 @@ import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
 import { projects, statusLabels, type Status } from '../data';
 import { ArrowUpRight, Code, Search } from '../components/Icons';
-import { LinkButton, StatusBadge, fadeUp, stagger } from '../components/ui';
+import { LinkButton, NudgeArrow, StatusBadge, fadeUp, stagger } from '../components/ui';
 
 type Filter = Status | 'all';
 const filters: Filter[] = ['all', 'live', 'beta', 'progress', 'archived'];
@@ -123,8 +123,18 @@ export function Projects() {
                     </LinkButton>
                   )}
                   {p.live && (
-                    <LinkButton href={p.live} target="_blank" rel="noreferrer" icon aria-label={`${p.name} live site`}>
-                      <ArrowUpRight size={17} />
+                    <LinkButton
+                      href={p.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="go"
+                      style={{ flex: 1 }}
+                      aria-label={`Visit ${p.name} (opens in a new tab)`}
+                    >
+                      Visit
+                      <NudgeArrow>
+                        <ArrowUpRight size={17} />
+                      </NudgeArrow>
                     </LinkButton>
                   )}
                 </div>
