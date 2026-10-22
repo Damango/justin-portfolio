@@ -93,7 +93,7 @@ export const projects: Project[] = [
     status: 'progress',
     year: '2026',
     tile: ['#8ab8ff', '#3f78d4'],
-    live: '', // ← paste the project's website URL here to show a "Visit" button
+    live: 'https://ai-project-manager-weld-five.vercel.app/', // ← paste the project's website URL here to show a "Visit" button
   },
   {
     name: 'Afterhours (Gambling Simulator)',
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     status: 'live',
     year: '2026',
     tile: ['#8ab8ff', '#3f78d4'],
-    live: '', // ← paste the project's website URL here to show a "Visit" button
+    live: 'https://p-izza-boyz-final.vercel.app/', // ← paste the project's website URL here to show a "Visit" button
   },
   {
     name: 'Pizza Boyz Menu Admin',
